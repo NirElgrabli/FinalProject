@@ -22,25 +22,14 @@ function HeroSection() {
 
       <div className='hero-btns'>
         <Button
-          component={Link} to="/Product"
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick='loadHtml("template","..\components\pages\AboutUs.html")'
-          
         >
-          GET STARTED
+          <a href="/Product">GET STARTED</a>
         </Button>
         
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
-          
-        >
-          WATCH THIS <i className='far fa-play-circle' />
-        </Button>
       </div>
     </div>
   );

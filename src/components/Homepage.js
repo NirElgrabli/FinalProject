@@ -44,7 +44,7 @@ function Homepage() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/services'
+                  to='/SoonWillBe'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
@@ -63,18 +63,18 @@ function Homepage() {
   
               <li>
                 <Link
-                  to='/sign-up'
+                  to='/Login'
                   className='nav-links-mobile'
                   onClick={closeMobileMenu}
                 >
-                  Sign Up
+                  Login
                 </Link>
               </li>
             </ul>
             {button && <Button buttonStyle='btn--outline'>
-              <Link to= '/sign-up'
+              <Link to= '/Login'
               onClick={closeMobileMenu}>
-              SIGN UP
+              Login
               </Link>
               </Button>}
           </div>

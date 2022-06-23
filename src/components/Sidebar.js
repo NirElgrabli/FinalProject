@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
-import './Sidebar.css';
+import  styles from './Sidebar.css';
 import { IconContext } from 'react-icons';
 
 function Sidebar() {
@@ -30,13 +30,13 @@ function Sidebar() {
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: '#0f0a0a' }}>
         <div className='navbars'>
           <Link to='#' className='menu-barss'>
             <FaIcons.FaBars onClick={showSidebar}  />
           </Link>
           <div className='menu-textsa' >
-          <Link to='/Homepage' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/Homepage' className='navbar-logo5' onClick={closeMobileMenu}>
           <i class="fab fa-invision"></i> <i class="fas fa-tshirt"></i>MODEST IN STYLE <i class="fas fa-tshirt"></i>  <i class="fab fa-invision"></i>
             </Link>
             </div>

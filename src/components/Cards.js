@@ -28,13 +28,13 @@ function Cards() {
               src='images/tshirtT1.jpg'
               text='Shirts and sweaters of the highest quality'
               label='Shirts'
-              path='Product/Shirts'
+              path='Product/Shirt'
             />
             <CardItem
-              src='images/bootsT1.jpg'
+              src='/images/id8.jpg'
               text='Comfortable shoes and suitable for everything with a very wide range'
-              label='Boots'
-              path='Product/Boots'
+              label='Blazer'
+              path='Product/Blazer'
             />
             <CardItem
               src='images/squirtT1.jfif'

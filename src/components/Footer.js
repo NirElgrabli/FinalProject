@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+}
 
   return (
     <div className='footer-container'>
@@ -32,7 +35,7 @@ function Footer() {
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <Link to='/AboutUs'>About Us</Link>
+            <Link to='/AboutUs' onClick={scrollToTop}>About Us</Link>
             <h2 to='/'>How it works</h2>
             <h2 to='/'> Testimonials</h2>
             <h2 to='/'>Careers</h2>
@@ -76,7 +79,7 @@ function Footer() {
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
-              to='/'
+              to='/SoonWillBe'
               target='_blank'
               aria-label='Facebook'
             >
@@ -84,7 +87,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
+              to='/SoonWillBe'
               target='_blank'
               aria-label='Instagram'
             >
@@ -92,7 +95,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='/'
+              to='/SoonWillBe'
               target='_blank'
               aria-label='Youtube'
             >
@@ -100,7 +103,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
+              to='/SoonWillBe'
               target='_blank'
               aria-label='Twitter'
             >
@@ -108,7 +111,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
+              to='/SoonWillBe'
               target='_blank'
               aria-label='LinkedIn'
             >

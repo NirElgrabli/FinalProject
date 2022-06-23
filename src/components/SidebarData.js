@@ -7,7 +7,7 @@ export const SidebarData = [
    {
         title: 'Home',
         path: '/Homepage',
-        icon: <AiIcons.AiFillHome />,
+      //  icon: <AiIcons.AiFillHome />,
         cName: 'nav-text'
    },
    {
@@ -25,7 +25,7 @@ export const SidebarData = [
   {
     title: 'Shirt',
     path: '/Product/Shirt',
-    icon: <IoIcons.IoIosShirt />,
+   // icon: <IoIcons.IoIosShirt />,
     cName: 'nav-text'
   },
   {
@@ -47,9 +47,9 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Support',
-    path: '/support',
-    icon: <IoIcons.IoMdHelpCircle />,
+    title: 'AboutUs',
+    path: '/AboutUs',
+  //  icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
   }
 ];

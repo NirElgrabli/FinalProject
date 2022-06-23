@@ -8,12 +8,16 @@ import Homepage from "./components/Homepage";
 import './App.css';
 import Home from "./components/pages/Home";
 import ProductPage from "./components/pages/ProductPage";
+
 import Dress from "./components/Categories/dress";
 import Blazer from "./components/Categories/Blazer";
 import Shirt from "./components/Categories/Shirt";
 import Skirt from "./components/Categories/Skirt";
-import Hat from "./components/Categories/Hat";
+import Headdress from "./components/Categories/Headdress";
 import AboutUs from "./components/AboutUs.js";
+import WillBeUpSoon from "./components/pages/WillBeUpSoon";
+import {Login } from "./Login";
+import SignUp  from "./Signup/Signup";
 
 
 
@@ -30,8 +34,15 @@ return (
               <Route path='/Homepage' exact component={Home}>
               </Route>
 
-              <Route   path='/AboutUs'   exact component={AboutUs}>
-                
+              <Route   path='/AboutUs'   exact component={AboutUs}>       
+              </Route>
+
+              <Route   path='/Login'   exact component={Login}>       
+              </Route>
+              <Route   path='/Signup'   exact component={SignUp}>       
+              </Route>
+              
+              <Route   path='/SoonWillBe'   exact component={WillBeUpSoon}>       
               </Route>
 
              <Route path="/"  exact component={Home}/>
@@ -39,7 +50,7 @@ return (
              <Route path="/Product/Blazer" exact component={Blazer}/>
              <Route path="/Product/Shirt" exact component={Shirt}/>
              <Route path="/Product/Skirt" exact component={Skirt}/>
-             <Route path="/Product/Headdress" exact component={Hat}/>
+             <Route path="/Product/Headdress" exact component={Headdress}/>
 
              <Route path="/product/:id" 
               component={props => <Product {...props}/>}/>

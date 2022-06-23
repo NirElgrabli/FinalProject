@@ -4,8 +4,11 @@ import './Cards.css';
 import AboutUsBox from './AboutUsBox.js';
 
 export default function AboutUs() {
+  function scrollToTop() {
+    window.scrollTo(100, document.body.scrollHeight);
+}
     return (
-        <div class="section">
+        <div class="section" scrollToTop>
 		<div class="container">
 			<div class="content-section">
 				<div class="title">
@@ -27,9 +30,9 @@ export default function AboutUs() {
 					</div>
 				</div>
 				<div class="social">
-					<a href=""><i class="fab fa-facebook-f"></i></a>
-					<a href=""><i class="fab fa-twitter"></i></a>
-					<a href=""><i class="fab fa-instagram"></i></a>
+					<a href="/SoonWillBe"><i class="fab fa-facebook-f"></i></a>
+					<a href="/SoonWillBe"><i class="fab fa-twitter"></i></a>
+					<a href="/SoonWillBe"><i class="fab fa-instagram"></i></a>
 				</div>
 			</div>
             

@@ -4,15 +4,16 @@ import '../../App.css';
 import {Box, Button, Center, Flex, GridItem, Heading, Image, Input, SimpleGrid, Spacer, Stack, Tag , Spinner} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Sidebar from '../Sidebar';
+import Footer from "../Footer";
 
 const StoreItem = ({title, price, image}) => {
-    return <Box p={6} borderRadius='lg' borderWidth='1px' bgColor='transparent'>
+    return <Box p={6} borderRadius='lg' borderWidth='1px' bgColor='transparent' style={{height:'100%'}}>
         <Center>
-        <Image src={image} w={24} />
+        <Image src={image} w={72} />
         </Center>
         <Heading mt={4} noOfLines={2} size= "sm" fontWeight="normal">{title}
         </Heading>
-        <Tag mt={4} bgColor='red'>${price} </Tag>
+        <Tag mt={4} bgColor='#f2f1f2'  style={{ borderWidth:1,borderColor:'#1e1e1e'}}>${price} </Tag>
     </Box>
 }
 
@@ -56,47 +57,46 @@ useEffect(()=>{
 return (
     <>
      <Sidebar />
+    
+    <Box bgColor='#f2f1f2' >
 
-     <Box bgColor='#7c30ff'>
-         
-         {/* <Header title="Stor name"/> */}
-         {loading ? 
-         <Center mt={6}  >
-         <Spinner />
-         </Center> :
-         <Box p={2} >
-             <Box Center w="30%" ml={480}   >
-             <Input onChange={(e) => {
-             let f =storeItem.filter((item) =>
-                  item.title.toLowerCase().includes(e.target.value.toLowerCase())
-             );
-             //console.log("f",f);
-             setFilteredItems(f);
-             
-         }}
-         
-         
-         placeholder="Search" mt={4} />
-         </Box>
+        {/* <Header title="Stor name"/> */}
+        {loading ? 
+        <Center mt={6}  >
+        <Spinner />
+        </Center> :
+        <Box p={2}>
+            <Box Center w="100%" style={{display:'flex',justifyContent:'center'}} >
+            <Input style={{width:400, borderWidth:4}} onChange={(e) => {
+            let f =storeItem.filter((item) =>
+                 item.title.toLowerCase().includes(e.target.value.toLowerCase())
+            );
+            //console.log("f",f);
+            setFilteredItems(f);
+            
+        }}
+        
+        
+        placeholder="Search" mt={4} />
+        </Box>
 
-
-         <SimpleGrid columns={4} spacing={4} mt={4}  >
-         {filteredItems.map((item)=> {
-            return <GridItem >
-                <Link to={{
-                    pathname:`/product/${item.id}`,
-                    state: item,
-                }}>
-                <StoreItem {...item} /> 
-                </Link>
-                </GridItem>
+        <SimpleGrid columns={4} spacing={4} mt={4}  >
+        {filteredItems.map((item)=> {
+           return <GridItem style={{display:'flex'}}>
+               <Link to={{
+                   pathname:`/product/${item.id}`,
+                   state: item,
+               }}>
+               <StoreItem {...item}/> 
+               </Link>
+               </GridItem>
 
          })}
-         </SimpleGrid>
-         </Box>
-         }
-     </Box>
-     
+        </SimpleGrid>
+        </Box>
+        }
+    </Box>
+    <Footer />
      </>
     );
 }

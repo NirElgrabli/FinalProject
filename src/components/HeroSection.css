@@ -20,8 +20,9 @@ video {
 
   
   .hero-container > h1 {
+    display: flex;
     color: #ffe4e1;
-    font-size: 60px;
+    font-size: 40px;
     margin-top: -100px;
   }
   
@@ -48,14 +49,16 @@ video {
   
   @media screen and (max-width: 960px) {
     .hero-container > h1 {
-      font-size: 70px;
+      display: flex;
+      font-size: 40px;
       margin-top: -150px;
     }
   }
   
   @media screen and (max-width: 768px) {
     .hero-container > h1 {
-      font-size: 50px;
+      display: flex;
+      font-size: 35px;
       margin-top: -100px;
     }
   

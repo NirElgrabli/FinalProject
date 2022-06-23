@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 
 
 const StoreItem = ({title, price, image}) => {
-    return <Box p={6} borderRadius='lg' borderWidth='1px' bgColor='transparent'>
+    return <Box p={6} borderRadius='lg' borderWidth='1px' bgColor='transparent' style={{height:'100%'}}>
         <Center>
-        <Image src={image} w={24} />
+        <Image src={image} w={72} />
         </Center>
         <Heading mt={4} noOfLines={2} size= "sm" fontWeight="normal">{title}
         </Heading>
-        <Tag mt={4} bgColor='red'>${price} </Tag>
+        <Tag mt={4} bgColor='#f2f1f2'  style={{ borderWidth:1,borderColor:'#1e1e1e'}}>${price} </Tag>
     </Box>
 }
 
@@ -47,7 +47,7 @@ useEffect(()=>{
  {"id":15,"category":"hat","price":"159₪" ,"title" : "Diamond scarf", "description": "Silver sequin diamond scarf handkerchief","brand": "Ortaldesign", "site": "https://www.ortaldesign.co.il/" , "urf": "https://www.ortaldesign.co.il/product/%D7%9E%D7%98%D7%A4%D7%97%D7%AA-%D7%A6%D7%A2%D7%99%D7%A3-%D7%99%D7%94%D7%9C%D7%95%D7%9D-%D7%9B%D7%A1%D7%A3-%D7%A4%D7%99%D7%99%D7%98%D7%99%D7%9D", 'image': '/images/id15.jpg'}
 ]
 return (
-     <Box bgColor='#7c30ff' >
+     <Box bgColor='#f2f1f2' >
 
          {/* <Header title="Stor name"/> */}
          {loading ? 
@@ -55,8 +55,8 @@ return (
          <Spinner />
          </Center> :
          <Box p={2}>
-             <Box Center w="30%" ml={480}   >
-             <Input onChange={(e) => {
+             <Box Center w="100%" style={{display:'flex',justifyContent:'center'}} >
+             <Input style={{width:400, borderWidth:4}} onChange={(e) => {
              let f =storeItem.filter((item) =>
                   item.title.toLowerCase().includes(e.target.value.toLowerCase())
              );
@@ -71,12 +71,12 @@ return (
 
          <SimpleGrid columns={4} spacing={4} mt={4}  >
          {filteredItems.map((item)=> {
-            return <GridItem >
+            return <GridItem style={{display:'flex'}}>
                 <Link to={{
                     pathname:`/product/${item.id}`,
                     state: item,
                 }}>
-                <StoreItem {...item} /> 
+                <StoreItem {...item}/> 
                 </Link>
                 </GridItem>
 
